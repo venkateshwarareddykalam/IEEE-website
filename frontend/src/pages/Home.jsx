@@ -1,12 +1,18 @@
 import React from 'react'
 import MenuListComposition from '../components/MenuButton'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Testimonials from '../components/Testimonials'
+import AboutUs from '../components/AboutUs'
+import HeroSection from '../components/HeroSection'
 const Home = () => {
   return (
     <div>
-      hello
       <Navbar/>
-      <MenuListComposition data={{name:"menu","submenu":["option1","option2"]}}/>
+      <HeroSection/>
+      <AboutUs/>
+      <Testimonials/>
+      <Footer/>
     </div>
   )
 }

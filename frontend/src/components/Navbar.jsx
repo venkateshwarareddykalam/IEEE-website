@@ -1,32 +1,37 @@
-import React from 'react'
-import { navbar } from '../constants'
-import { ListItem } from '@mui/material'
-import MenuButton from './MenuButton'
-import image1 from "../assets/ieee1.png"
+import React from "react";
+import { navbar } from "../constants";
+import MenuButton from "./MenuButton";
+
 const Navbar = () => {
+  const buttons = navbar.filter((item) => item.type !== "icon");
+  const icons = navbar.filter((item) => item.type === "icon");
 
-    const buttons= navbar.filter((item,index)=>item.type=="menu")
-    const icons=navbar.filter((item,index)=>item.type=="icon")
   return (
-    <nav>
-        <div className='flex justify-between'>
-            <div>
-                <div className="icon h-12 w-20">
-                    <img src={image1} alt="ieee logo"/>
-                </div>
-
-            </div>
-            <div className='space-x-4 flex '>
-                end
-                {
-                    buttons.map((item,index)=>(
-                        <MenuButton data={item}/>
-                    ))
-                }
-            </div>
+    <nav className="h-16 bg-white shadow-md fixed top-0 w-full z-50">
+      <div className="flex justify-between items-center px-6 h-full">
+        {/* Left Side - Logos */}
+        <div className="flex items-center space-x-6">
+          <img
+            src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
+            alt="IEEE Logo"
+            className="h-12 w-auto transition-transform duration-300 hover:scale-110"
+          />
+          <img
+            src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
+            alt="CBIT Logo"
+            className="h-12 w-auto transition-transform duration-300 hover:scale-110"
+          />
         </div>
-    </nav>
-  )
-}
 
-export default Navbar
+        {/* Right Side - Menu Buttons */}
+        <div className="flex space-x-6">
+          {buttons.map((item, index) => (
+            <MenuButton key={index} data={item} />
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
