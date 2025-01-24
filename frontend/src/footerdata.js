@@ -3,10 +3,10 @@ const footerData = [
         section: "contactInfo",
         items: {
             name: "Sasigd",
-            institute: "IIT (ISM), Dhanbad",
-            location: "Jharkhand, India",
-            phone: "+91-9471194144",
-            email: "rait@iitism.ac.in"
+            institute: "CBIT",
+            location: "Hyderabad,India",
+            phone: "+91",
+            email: "cbit.ac.in"
         }
     },
     {
@@ -14,7 +14,7 @@ const footerData = [
         items: [
             { label: "Home", url: "#" },
             { label: "Registration", url: "#" },
-            { label: "IIT (ISM), Dhanbad", url: "#" }
+            { label: "CBIT", url: "#" }
         ]
     },
     {
