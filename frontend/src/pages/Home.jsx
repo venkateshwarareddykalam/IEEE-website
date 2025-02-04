@@ -5,7 +5,7 @@ import Testimonials from '../components/Testimonials';
 import HeroSection from '../components/HeroSection';
 import ConferenceTimer from '../components/ConferenceTimer';
 import '../styles/Home.css'; // Import CSS
-import IEEEConferenceTable from '../components/IeeeConferenceTable';
+import IEEEConferenceTable from '../components/IEEEConferenceTable';
 const Home = () => {
   return (
     <div className="home-container">
