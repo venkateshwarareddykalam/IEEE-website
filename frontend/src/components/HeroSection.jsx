@@ -9,10 +9,12 @@ const HeroSection = () => {
                 position: 'relative',
                 width: '100%',
                 height: '90vh',
-                backgroundImage: 'url("https://media.getmyuni.com/azure/college-image/big/chaitanya-bharathi-institute-of-technology-cbit-hyderabad.jpg")', // Replace with actual background image
+                //backgroundImage: 'url("https://media.getmyuni.com/azure/college-image/big/chaitanya-bharathi-institute-of-technology-cbit-hyderabad.jpg")', // Replace with actual background image,
+                backgroundImage: 'url("https://wallpapercave.com/wp/wp2809468.jpg")', // Replace with actual background image
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 display: 'flex',
+                flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
@@ -31,50 +33,45 @@ const HeroSection = () => {
                 </Typography>
             </motion.div>
 
-            {/* Logos */}
-            <Box
-                sx={{
-                    position: 'absolute',
-                    bottom: '10%',
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    px: { xs: 3, md: 10 },
-                }}
+            {/* Additional Text */}
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.5 }}
             >
-                {/* Left Logo */}
-                <motion.img
-                    src="https://techx-2022.github.io/web/images/resource/ieeek.png" // Replace with left logo
-                    alt="Left Logo"
-                    className="logo"
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
-                    style={{ width: '120px', height: 'auto' }}
-                />
+                <Typography variant="h5" sx={{ mt: 2, textShadow: '1px 1px 5px rgba(0,0,0,0.5)' }}>
+                    Join us for an immersive experience in the world of technology.
+                </Typography>
+            </motion.div>
 
-                {/* Middle Logo */}
-                <motion.img
-                    src="https://th.bing.com/th?id=OIP.OUjRILVYpdx0V-sqUkVdgwHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" // Replace with middle logo
-                    alt="Middle Logo"
-                    className="logo"
-                    initial={{ opacity: 0, scale: 0.5 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }}
-                    style={{ width: '140px', height: 'auto' }}
-                />
-
-                {/* Right Logo */}
-                <motion.img
-                    src="https://th.bing.com/th?id=OIP.ba7vRD1QW-du9c_WMEuaRAHaI3&w=228&h=273&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2" // Replace with right logo
-                    alt="Right Logo"
-                    className="logo"
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1 }}
-                    style={{ width: '120px', height: 'auto' }}
-                />
-            </Box>
+            {/* Call to Action Button */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 1 }}
+            >
+                <Box
+                    component="button"
+                    sx={{
+                        mt: 4,
+                        px: 4,
+                        py: 2,
+                        fontSize: '1.2rem',
+                        fontWeight: 'bold',
+                        color: 'white',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                        border: 'none',
+                        borderRadius: '8px',
+                        cursor: 'pointer',
+                        textShadow: '1px 1px 5px rgba(0,0,0,0.5)',
+                        '&:hover': {
+                            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                        },
+                    }}
+                >
+                    Learn More
+                </Box>
+            </motion.div>
         </Box>
     );
 };
