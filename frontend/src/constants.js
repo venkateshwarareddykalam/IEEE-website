@@ -43,6 +43,11 @@ export const navbar = [
         ]
     },
     {
+        label:"Register",
+        type:"menu",
+        url:"#"
+    },
+    {
         label:"conference",
         type:"menu",
         submenu:[
