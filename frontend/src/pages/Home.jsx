@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import Testimonials from '../components/Testimonials';
+import AgendaSpeakers from '../components/AgendaSpeakers';
 import HeroSection from '../components/HeroSection';
 import ConferenceTimer from '../components/ConferenceTimer';
 import '../styles/Home.css'; // Import CSS
@@ -17,7 +17,7 @@ const Home = () => {
         <HeroSection />
         <ConferenceTimer />
         <IEEEConferenceTable/>
-        <Testimonials />
+        <AgendaSpeakers />
       </div>
 
       {/* Footer at the bottom */}
