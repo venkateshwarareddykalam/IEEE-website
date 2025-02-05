@@ -1,0 +1,74 @@
+/* Past Speakers Page Styling */
+.past-speakers-page {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: #0b1120; /* Dark blue background */
+}
+
+/* Heading Container */
+.heading-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.heading-container h1 {
+  font-size: 48px;
+  color: #ffffff; /* White text */
+}
+
+/* Agenda & Speakers Section */
+.agenda-speakers {
+  text-align: center;
+  padding: 40px;
+}
+
+.agenda-speakers p {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+/* Speakers Container */
+.speakers-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Speaker Card */
+.speaker-card {
+  position: relative;
+  width: 200px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.speaker-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  filter: grayscale(100%); /* Black and white by default */
+}
+
+.speaker-card.active img {
+  filter: grayscale(0%); /* Remove grayscale on hover */
+}
+
+.speaker-card.active {
+  transform: scale(1.1); /* Enlarge the active card */
+}
+
+/* Speaker Details (Below Image) */
+.speaker-details {
+  text-align: center;
+}
+
+.speaker-details h3 {
+  font-size: 18px;
+}
+
+.speaker-details .title {
+  font-size: 14px;
+}
+
+.speaker-details .description {
+  font-size: 12px;
+}
