@@ -8,28 +8,28 @@ const speakers = [
     title: "CEO @ AG1",
     description:
       "Kat Cole is CEO at AG1, a global health company focused on foundational nutrition. In her role, she is responsible for leading AG1’s next phase of growth, global expansion, and innovation.",
-    image: "/src/assets/pk.png", // Replace with your image path
+    image: "/src/assets/speaker1.avif", // Replace with your image path
   },
   {
     id: 2,
     name: "Speaker 2",
     title: "Title @ Company",
     description: "Description for Speaker 2.",
-    image: "/src/assets/mahesh.jpeg", // Replace with your image path
+    image: "/src/assets/speaker2.avif", // Replace with your image path
   },
   {
     id: 3,
     name: "Speaker 3",
     title: "Title @ Company",
     description: "Description for Speaker 3.",
-    image: "/src/assets/prabhas.png", // Replace with your image path
+    image: "/src/assets/spraker3.avif", // Replace with your image path
   },
   {
     id: 4,
     name: "Speaker 4",
     title: "Title @ Company",
     description: "Description for Speaker 4.",
-    image: "/src/assets/vijay.png", // Replace with your image path
+    image: "/src/assets/speaker4.avif", // Replace with your image path
   },
 ];
 
