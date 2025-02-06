@@ -9,7 +9,7 @@ const dates = [
 
 const ImportantDates = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 p-5">
+    <div className="flex justify-center items-center bg-gray-100 p-5 min-h-fit">
       <div className="text-center max-w-4xl w-full">
         <h2 className="text-2xl font-bold text-[#0C0636] mb-16">
           Important <span className="text-[#3A4D8F]">Dates</span>
