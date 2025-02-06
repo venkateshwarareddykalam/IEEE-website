@@ -17,7 +17,7 @@ const Home = () => {
       <div className="main-content">
         <HeroSection />
         <ConferenceTimer />
-        <IEEEImporttantDates/>
+        <IEEEImportantDates/>
         <AgendaSpeakers />
       </div>
 
