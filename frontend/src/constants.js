@@ -29,19 +29,28 @@ export const navbar = [
         ]
     },
     {
-        label: "Committees",
-        type: "menu",
-        submenu: [
+        "label": "Committees",
+        "type": "menu",
+        "submenu": [
             {
-                label: "Advisory Board",
-                url: "/advisory-board"
+                "label": "Advisory Board",
+                "url": "/advisory-board"
             },
             {
-                label: "Program And Organizing Committee",
-                url: "/program-organizing"
+                "label": "Program And Organizing Committee",
+                "url": "/program-organizing"
+            },
+            {
+                "label": "Organizing Committee",
+                "url": "/organizing-committee"
+            },
+            {
+                "label": "Technical Program Committee",
+                "url": "/technical-program"
             }
         ]
-    },
+    }
+    ,
     {
         label:"Register",
         type:"menu",

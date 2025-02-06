@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 import footerData from '../footerdata.js';
 
 const Footer = () => {
@@ -33,19 +36,35 @@ const Footer = () => {
                         {section.section === "contactInfo" ? (
                             <div>
                                 <h2 className="text-xl font-bold">{section.items.name}</h2>
-                                <p className="mt-2">{section.items.institute}<br />{section.items.location}</p>
-                                <p className="mt-2"><span className="font-semibold">Phone:</span> {section.items.phone}</p>
-                                <p className="mt-2"><span className="font-semibold">Email:</span> {section.items.email}</p>
+                                <p className="mt-2 flex items-center"><FaMapMarkerAlt className="mr-2" /> {section.items.institute}, {section.items.location}</p>
+                                <p className="mt-2 flex items-center"><FaPhone className="mr-2" /> {section.items.phone}</p>
+                                <p className="mt-2 flex items-center"><FaEnvelope className="mr-2" /> {section.items.email}</p>
                             </div>
+                        ) : section.section === "socialLinks" ? (
+                            <>
+                                <h3 className="text-lg font-bold">Social Links</h3>
+                                <ul className="mt-2 space-y-2">
+                                    {section.items.map((link, idx) => (
+                                        <li key={idx} className="flex items-center space-x-2">
+                                            {link.label === "Facebook" && <FaFacebook />}
+                                            {link.label === "X" && <FaXTwitter />}
+                                            {link.label === "LinkedIn" && <FaLinkedin />}
+                                            <Link to={link.url} className="hover:underline transition duration-300 ease-in-out">
+                                                {link.label}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
                         ) : (
                             <>
                                 <h3 className="text-lg font-bold">{section.section.replace(/([A-Z])/g, ' $1').trim()}</h3>
                                 <ul className="mt-2 space-y-2">
                                     {section.items.map((link, idx) => (
                                         <li key={idx}>
-                                            <a href={link.url} className="hover:underline transition duration-300 ease-in-out">
+                                            <Link to={link.url} className="hover:underline transition duration-300 ease-in-out">
                                                 {link.label}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>

@@ -9,7 +9,6 @@ import IEEEImportantDates from "../components/IEEEImportantDates"
 import Sponsors from '../components/Sponsors';
 const Home = () => {
   return (
-    
       <>
       {/* Main content */}
       <Navbar/>
