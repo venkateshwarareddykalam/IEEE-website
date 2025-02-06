@@ -57,6 +57,12 @@ export const navbar = [
         url:"#"
     },
     {
+        label:"contactus",
+        type:"link",
+        url:"/contactus"
+    },
+
+    {
         label:"conference",
         type:"menu",
         submenu:[
