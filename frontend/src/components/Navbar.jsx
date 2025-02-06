@@ -30,14 +30,7 @@ const Navbar = () => {
         {/* Right Side - Menu Buttons with Hover Effect */}
         <div className="flex space-x-6 items-center">
           {buttons.map((item, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.1, backgroundColor: "#f3f4f6" }}
-              transition={{ duration: 0.1 }}
-              className="rounded-md p-2"
-            >
-              <MenuButton data={item} />
-            </motion.div>
+            <MenuButton key={index} data={item} />
           ))}
           {/* Submit Paper Button */}
           <motion.button

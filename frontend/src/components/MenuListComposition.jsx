@@ -1,67 +1,51 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
-import { Link } from 'react-router-dom';
+import React, { useState, useRef } from "react";
+import Button from "@mui/material/Button";
+import ClickAwayListener from "@mui/material/ClickAwayListener";
+import Grow from "@mui/material/Grow";
+import Paper from "@mui/material/Paper";
+import Popper from "@mui/material/Popper";
+import MenuItem from "@mui/material/MenuItem";
+import MenuList from "@mui/material/MenuList";
+import Stack from "@mui/material/Stack";
+import { Link } from "react-router-dom";
 
 export default function MenuListComposition({ data }) {
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
+  const [open, setOpen] = useState(false);
+  const anchorRef = useRef(null);
 
   const handleMouseEnter = () => {
     setOpen(true);
   };
 
   const handleMouseLeave = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-    setOpen(false);
-  };
-
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-    setOpen(false);
-  };
-
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault();
-      setOpen(false);
-    } else if (event.key === 'Escape') {
+    if (
+      anchorRef.current &&
+      !anchorRef.current.contains(event.relatedTarget)
+    ) {
       setOpen(false);
     }
-  }
-
-  // return focus to the button when we transitioned from !open -> open
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
-
-    prevOpen.current = open;
-  }, [open]);
+  };
 
   return (
     <Stack direction="row" spacing={2}>
-      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="relative"
+      >
+        {/* Main Button */}
         <Button
           ref={anchorRef}
           id="composition-button"
-          aria-controls={open ? 'composition-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
+          aria-controls={open ? "composition-menu" : undefined}
+          aria-expanded={open ? "true" : undefined}
           aria-haspopup="true"
+          className="text-gray-700 font-medium hover:text-gray-900"
         >
           {data.label}
         </Button>
+
+        {/* Dropdown Menu */}
         {data.type === "menu" && data.submenu && (
           <Popper
             open={open}
@@ -70,30 +54,39 @@ export default function MenuListComposition({ data }) {
             placement="bottom-start"
             transition
             disablePortal
+            modifiers={[
+              {
+                name: "preventOverflow",
+                options: {
+                  boundary: "viewport",
+                },
+              },
+            ]}
           >
-            {({ TransitionProps, placement }) => (
+            {({ TransitionProps }) => (
               <Grow
                 {...TransitionProps}
                 style={{
-                  transformOrigin:
-                    placement === 'bottom-start' ? 'left top' : 'left bottom',
+                  transformOrigin: "left top",
                 }}
               >
-                <Paper>
-                  <ClickAwayListener onClickAway={handleClose}>
-                    <MenuList
-                      autoFocusItem={open}
-                      id="composition-menu"
-                      aria-labelledby="composition-button"
-                      onKeyDown={handleListKeyDown}
-                    >
-                      {data.submenu.map((item, index) => (
-                        <MenuItem onClick={handleClose} key={index}>
-                          <Link to={item.url}>{item.label}</Link>
-                        </MenuItem>
-                      ))}
-                    </MenuList>
-                  </ClickAwayListener>
+                <Paper
+                  onMouseEnter={() => setOpen(true)}
+                  onMouseLeave={() => setOpen(false)}
+                  className="z-50"
+                >
+                  <MenuList autoFocusItem={open} id="composition-menu">
+                    {data.submenu.map((item, index) => (
+                      <MenuItem key={index}>
+                        <Link
+                          to={item.url}
+                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+                        >
+                          {item.label}
+                        </Link>
+                      </MenuItem>
+                    ))}
+                  </MenuList>
                 </Paper>
               </Grow>
             )}

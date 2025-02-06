@@ -1,112 +1,51 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import Grow from '@mui/material/Grow';
-import Paper from '@mui/material/Paper';
-import Popper from '@mui/material/Popper';
-import MenuItem from '@mui/material/MenuItem';
-import MenuList from '@mui/material/MenuList';
-import Stack from '@mui/material/Stack';
-import { Link } from 'react-router-dom'; // Ensure you use React Router
+import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 
-export default function MenuListComposition({ data }) {
-  const [open, setOpen] = React.useState(false);
-  const anchorRef = React.useRef(null);
+export default function MenuButton({ data }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const timeoutRef = useRef(null); // Ref to store the timeout ID
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current); // Clear any existing timeout
+    }
+    setIsOpen(true); // Open the dropdown immediately
   };
 
-  const handleClose = (event) => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return;
-    }
-    setOpen(false);
+  const handleMouseLeave = () => {
+    // Add a delay before closing the dropdown
+    timeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 200); // Delay of 200ms
   };
-
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab' || event.key === 'Escape') {
-      event.preventDefault();
-      setOpen(false);
-    }
-  }
-
-  const prevOpen = React.useRef(open);
-  React.useEffect(() => {
-    if (prevOpen.current === true && open === false) {
-      anchorRef.current.focus();
-    }
-    prevOpen.current = open;
-  }, [open]);
 
   return (
-    <Stack direction="row" spacing={2}>
-      <div>
-        <Button
-          ref={anchorRef}
-          id="composition-button"
-          aria-controls={open ? 'composition-menu' : undefined}
-          aria-expanded={open ? 'true' : undefined}
-          aria-haspopup="true"
-          onClick={handleToggle}
+    <div
+      className="relative"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Main Button */}
+      <button className="text-gray-700 font-medium hover:text-gray-900 focus:outline-none">
+        {data.label}
+      </button>
+
+      {/* Dropdown Menu */}
+      {data.type === "menu" && data.submenu && isOpen && (
+        <div
+          className="absolute left-0 mt-2 w-max bg-white border border-gray-200 rounded-md shadow-lg z-50"
         >
-          {data.label}
-        </Button>
-        {data.type === "menu" && data.submenu && (
-          <Popper
-            open={open}
-            anchorEl={anchorRef.current}
-            role={undefined}
-            placement="bottom-start"
-            transition
-            disablePortal
-            modifiers={[
-              {
-                name: "zIndex",
-                enabled: true,
-                phase: "afterWrite",
-                fn: ({ state }) => {
-                  state.elements.popper.style.zIndex = "9999"; // High z-index
-                },
-              },
-            ]}
-            style={{ zIndex: 9999 }} // Ensures it is above other elements
-          >
-            {({ TransitionProps, placement }) => (
-              <Grow
-                {...TransitionProps}
-                style={{
-                  transformOrigin:
-                    placement === "bottom-start" ? "left top" : "left bottom",
-                }}
-              >
-                <Paper>
-                  <ClickAwayListener onClickAway={handleClose}>
-                    <MenuList
-                      autoFocusItem={open}
-                      id="composition-menu"
-                      aria-labelledby="composition-button"
-                      onKeyDown={handleListKeyDown}
-                      
-                    >
-                      {data.submenu.map((item, index) => (
-                        <MenuItem onClick={handleClose} key={index}>
-                          <Link
-                            to={item.url}
-                            style={{ textDecoration: "none", color: "inherit" }}
-                          >
-                            {item.label}
-                          </Link>
-                        </MenuItem>
-                      ))}
-                    </MenuList>
-                  </ClickAwayListener>
-                </Paper>
-              </Grow>
-            )}
-          </Popper>
-        )}
-      </div>
-    </Stack>
+          {data.submenu.map((item, index) => (
+            <Link
+              key={index}
+              to={item.url}
+              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
