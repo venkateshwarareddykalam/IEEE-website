@@ -27,7 +27,8 @@ export default function MenuButton({ data }) {
     >
       {/* Main Button */}
       <button className="text-gray-700 font-medium hover:text-gray-900 focus:outline-none">
-        {data.label}
+        {data.type=="menu"&&<>{data.label}</>}
+        {data.type=="link"&&<><Link to={`${data.url}`}>{data.label}</Link></>}
       </button>
 
       {/* Dropdown Menu */}
