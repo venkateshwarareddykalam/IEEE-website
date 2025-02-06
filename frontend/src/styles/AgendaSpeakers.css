@@ -1,0 +1,153 @@
+/* Past Speakers Page */
+.past-speakers-page {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: #0b1120; /* Dark blue background */
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Disable Scrollbar */
+body, html {
+  overflow: scroll; /* Hide the scrollbar */
+  height: 100%;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Heading with Animation */
+.heading {
+  font-size: 48px;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeSlideDown 1s ease-in-out forwards;
+}
+
+/* Sub-description Animation */
+.description {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  opacity: 0;
+  animation: fadeIn .25s ease-in-out forwards 0.5s;
+}
+
+/* Speakers Container */
+.speakers-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Speaker Card */
+.speaker-card {
+  position: relative;
+  width: 220px;
+  cursor: pointer;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+}
+
+.speaker-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: grayscale(100%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* Gradient Overlay (over the image) */
+.speaker-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%; /* Adjust the height of the gradient */
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  border-radius: 12px;
+  pointer-events: none; /* Ensures the gradient doesn’t interfere with the hover effect */
+}
+
+/* Scale Image Down on Hover */
+.speaker-card:hover img {
+  filter: grayscale(0%);
+  transform: scale(0.95); /* Scaled down instead of scaling up */
+}
+
+/* Active Card Effect */
+.speaker-card.active {
+  transform: scale(1.1); /* Slightly enlarge active card */
+}
+
+/* Speaker Details */
+.speaker-details {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  position: absolute;
+  bottom: -15px; /* Ensure the details stay at the bottom of the card */
+  left: 10px;
+  right: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #f1f1f1;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  z-index: 1; /* Ensure the text is above the image */
+}
+
+/* Make sure description has no background */
+.speaker-card:hover .speaker-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.speaker-details h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ffffff; /* White for the name */
+  font-weight: 500;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, .5); /* Adds a soft shadow */
+}
+
+.speaker-details .title {
+  font-size: 12px;
+  color: white; /* Slightly muted color for the title */
+  margin-top: 5px;
+}
+
+.speaker-details .description {
+  font-size: 12px;
+  margin-top: 5px;
+  color: white; /* Slightly lighter gray for description */
+  position: relative;
+  top: 10px;
+  margin-top: 0; /* Ensure description starts below the image */
+  z-index: 0; /* Keep the description below the image */
+}
+
+/* Heading Slide-Down Animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Simple Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
