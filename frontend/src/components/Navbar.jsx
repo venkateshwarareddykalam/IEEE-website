@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { navbar } from "../constants";
 import MenuButton from "./MenuButton";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Drawer, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const buttons = navbar.filter((item) => item.type !== "icon");
+
+  const toggleDrawer = (open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+    setDrawerOpen(open);
+  };
 
   return (
     <nav className="h-16 bg-white shadow-md sticky top-0 left-0 w-full z-50">
@@ -28,7 +39,7 @@ const Navbar = () => {
         </div>
 
         {/* Right Side - Menu Buttons with Hover Effect */}
-        <div className="flex space-x-6 items-center">
+        <div className="hidden md:flex space-x-6 items-center">
           {buttons.map((item, index) => (
             <motion.div
               key={index}
@@ -45,10 +56,11 @@ const Navbar = () => {
             transition={{ duration: 0.1 }}
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500"
           >
-            Submit Paper
+            <Link to="/submitpaper">Submit Paper</Link>
           </motion.button>
         </div>
       </div>
+
     </nav>
   );
 };

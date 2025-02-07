@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useInView } from "framer-motion";
 import "../styles/Sponsors.css";
 import googleLogo from "/google.jpg";
 import microsoftLogo from "/Microsoft.svg";
@@ -13,18 +14,48 @@ const sponsors = [
 ];
 
 const Sponsors = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="sponsors">
-      <h3>Sponsored by</h3>
-      <div className="sponsor-wrapper">
+      <motion.h3
+        className="sponsor-heading"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        style={{ fontSize: "2.5rem" }}
+      >
+        Sponsored by
+      </motion.h3>
+      <motion.div 
+        ref={ref}
+        className="sponsor-wrapper"
+        initial={{ opacity: 0, y: 50 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8 }}
+      >
         <div className="sponsor-list">
           {[...sponsors, ...sponsors].map((sponsor, index) => (
-            <a key={index} href={sponsor.link} target="_blank" rel="noopener noreferrer">
-              <img src={sponsor.logo} alt={sponsor.name} />
-            </a>
+            <motion.a 
+              key={index} 
+              href={sponsor.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img 
+                src={sponsor.logo} 
+                alt={sponsor.name} 
+                className="sponsor-logo" 
+                style={{ width: "180px", maxWidth: "100%" }}
+              />
+            </motion.a>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

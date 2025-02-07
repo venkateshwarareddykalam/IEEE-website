@@ -1,20 +1,25 @@
 import React from 'react';
 import { Box, Grid, Typography, Button } from '@mui/material';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import Timer from '../utils/Timer'; // Import the Timer component
 
 const AboutUs = () => {
+    const { ref: imageRef, inView: imageInView } = useInView({ triggerOnce: true });
+    const { ref: infoRef, inView: infoInView } = useInView({ triggerOnce: true });
+
     return (
         <Box sx={{ maxWidth: '1200px', mx: 'auto', py: 8, px: 3 }}>
             <Grid container spacing={4} alignItems="center">
                 {/* Image Section */}
                 <Grid item xs={12} md={6}>
                     <motion.img
-                        src="https://th.bing.com/th/id/OIP.cxZ2rvd0vWyR-sCSfYfEKAHaEY?rs=1&pid=ImgDetMain" // Replace with actual image
+                        ref={imageRef}
+                        src="https://static.vecteezy.com/system/resources/previews/022/325/096/non_2x/a-business-person-attending-a-conference-promoting-professional-growth-generative-ai-free-photo.jpg" // Replace with actual image
                         alt="About Us"
                         className="rounded-lg shadow-lg w-full"
                         initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        animate={imageInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8 }}
                     />
                 </Grid>
@@ -22,8 +27,9 @@ const AboutUs = () => {
                 {/* Information Section */}
                 <Grid item xs={12} md={6}>
                     <motion.div
+                        ref={infoRef}
                         initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        animate={infoInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ duration: 0.8 }}
                     >
                         <Typography variant="h4" sx={{ fontWeight: 'bold', mb: 2 }}>
@@ -40,14 +46,6 @@ const AboutUs = () => {
                     </motion.div>
                 </Grid>
             </Grid>
-
-            {/* Timer Component for Conference */}
-            <Box mt={6}>
-                <Typography variant="h5" align="center" fontWeight="bold" mb={2}>
-                    Conference Starts In:
-                </Typography>
-                <Timer targetDate="2025-06-15T12:00:00" />
-            </Box>
         </Box>
     );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const dates = [
   { label: "Early Bird Registration Deadline", date: "5th February 2025" },
@@ -9,12 +9,16 @@ const dates = [
 ];
 
 const ImportantDates = () => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <div className="flex justify-center items-center bg-gray-100 p-5 min-h-fit">
       <motion.div 
+        ref={ref}
         className="text-center max-w-4xl w-full"
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8 }}
       >
         <h2 className="text-2xl font-bold text-[#0C0636] mb-16">

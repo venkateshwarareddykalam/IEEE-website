@@ -1,38 +1,53 @@
 .sponsors {
-    text-align: center;
-    padding: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-  }
-  
-  .sponsor-wrapper {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-  }
-  
-  .sponsor-list {
-    display: flex;
-    gap: 40px;
-    animation: scrollLeft 10s linear infinite;
-  }
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.sponsor-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+.sponsor-list {
+  display: flex;
+  gap: 40px;
+  animation: scrollLeft 10s linear infinite;
+}
+
+.sponsor-list img {
+  width: 180px; /* Default size for larger screens */
+  max-width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sponsor-list img:hover {
+  opacity: 0.7;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
   .sponsor-list img {
-    width: 100px;
-    height: auto;
-    transition: opacity 0.3s ease-in-out;
+      width: 140px; /* Slightly smaller but still visible on tablets */
   }
-  
-  .sponsor-list img:hover {
-    opacity: 0.7;
+}
+
+@media (max-width: 480px) {
+  .sponsor-list img {
+      width: 120px; /* Ensures logos are still reasonably large on small screens */
   }
-  @keyframes scrollLeft {
-    from {
+}
+
+@keyframes scrollLeft {
+  from {
       transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-50%);
-    }
   }
-  
+  to {
+      transform: translateX(-50%);
+  }
+}

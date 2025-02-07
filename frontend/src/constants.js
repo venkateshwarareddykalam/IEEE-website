@@ -61,7 +61,6 @@ export const navbar = [
         type:"link",
         url:"/contactus"
     },
-
     {
         label:"conference",
         type:"menu",

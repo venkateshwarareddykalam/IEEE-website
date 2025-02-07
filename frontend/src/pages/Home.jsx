@@ -8,6 +8,7 @@ import '../styles/Home.css'; // Import CSS
 import IEEEConferenceTable from '../components/IEEEConferenceTable';
 import IEEEImportantDates from "../components/IEEEImportantDates"
 import Sponsors from '../components/Sponsors';
+import AboutUs from '../components/AboutUs';
 const Home = () => {
   return (
     
@@ -15,6 +16,7 @@ const Home = () => {
       {/* Main content */}
       
         <HeroSection />
+        <AboutUs />
         <ConferenceTimer />
         <IEEEImportantDates/>
         <AgendaSpeakers />

@@ -1,13 +1,10 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion, useInView } from 'framer-motion';
 import Timer from '../utils/Timer'; // Import the Timer component
 
 const ConferenceTimer = () => {
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-    });
+    const ref = React.useRef(null);
+    const inView = useInView(ref, { once: true, amount: 0.1 });
 
     return (
         <motion.div
