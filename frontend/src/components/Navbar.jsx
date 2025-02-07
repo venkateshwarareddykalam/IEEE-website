@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { navbar } from "../constants";
 import MenuButton from "./MenuButton";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu
+
   const buttons = navbar.filter((item) => item.type !== "icon");
 
   return (
     <nav className="bg-white shadow-md sticky top-0 left-0 w-full z-50">
-      <div className="flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 py-2 sm:py-0 h-auto sm:h-16">
-        {/* Left Side - Logos */}
-        <div className="flex items-center space-x-4 sm:space-x-6 mb-2 sm:mb-0">
+      <div className="flex items-center justify-between px-4 sm:px-6 h-16">
+        {/* Centered Logos */}
+        <div className="flex justify-center items-center space-x-4">
           <motion.img
             src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
             alt="IEEE Logo"
@@ -27,8 +29,32 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Right Side - Menu Buttons with Hover Effect */}
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+        {/* Hamburger Menu for Mobile */}
+        <div className="sm:hidden">
+          <button
+            className="text-gray-700 focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
+          >
+            {/* Hamburger Icon */}
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Full Menu for Larger Screens */}
+        <div className="hidden sm:flex space-x-6 items-center">
           {buttons.map((item, index) => (
             <motion.div
               key={index}
@@ -50,6 +76,24 @@ const Navbar = () => {
           </motion.button>
         </div>
       </div>
+
+      {/* Dropdown Menu for Mobile */}
+      {isMenuOpen && (
+        <div className="sm:hidden bg-white shadow-md">
+          <div className="flex flex-col items-start space-y-4 px-4 py-2">
+            {buttons.map((item, index) => (
+              <MenuButton key={index} data={item} />
+            ))}
+            {/* Submit Paper Button */}
+            <button
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 w-full text-center"
+              onClick={() => (window.location.href = "/login")}
+            >
+              Submit Paper
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
