@@ -20,33 +20,73 @@ export default function MenuButton({ data }) {
   };
 
   return (
-    <div
-      className="relative"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Main Button */}
-      <button className="text-gray-700 font-medium hover:text-gray-900 focus:outline-none">
-        {data.type=="menu"&&<>{data.label}</>}
-        {data.type=="link"&&<><Link to={`${data.url}`}>{data.label}</Link></>}
-      </button>
-
-      {/* Dropdown Menu */}
-      {data.type === "menu" && data.submenu && isOpen && (
-        <div
-          className="absolute left-0 mt-2 w-max bg-white border border-gray-200 rounded-md shadow-lg z-50"
+    <Stack direction="row" spacing={2}>
+      <div>
+        <Button
+          ref={anchorRef}
+          id="composition-button"
+          aria-controls={open ? 'composition-menu' : undefined}
+          aria-expanded={open ? 'true' : undefined}
+          aria-haspopup="true"
+          onClick={handleToggle}
         >
-          {data.submenu.map((item, index) => (
-            <Link
-              key={index}
-              to={item.url}
-              className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
-    </div>
+          {data.label}
+        </Button>
+        {data.type === "menu" && data.submenu && (
+          <Popper
+            open={open}
+            anchorEl={anchorRef.current}
+            role={undefined}
+            placement="bottom-start"
+            transition
+            disablePortal
+            modifiers={[
+              {
+                name: "zIndex",
+                enabled: true,
+                phase: "afterWrite",
+                fn: ({ state }) => {
+                  state.elements.popper.style.zIndex = "9999"; // High z-index
+                },
+              },
+            ]}
+            style={{ zIndex: 9999 }} // Ensures it is above other elements
+          >
+            {({ TransitionProps, placement }) => (
+              <Grow
+                {...TransitionProps}
+                style={{
+                  transformOrigin:
+                    placement === "bottom-start" ? "left top" : "left bottom",
+                }}
+              >
+                <Paper>
+                  <ClickAwayListener onClickAway={handleClose}>
+                    <MenuList
+                      autoFocusItem={open}
+                      id="composition-menu"
+                      aria-labelledby="composition-button"
+                      onKeyDown={handleListKeyDown}
+                      
+                    >
+                      {data.submenu.map((item, index) => (
+                        <MenuItem onClick={handleClose} key={index}>
+                          <Link
+                            to={item.url}
+                            style={{ textDecoration: "none", color: "inherit" }}
+                          >
+                            {item.label}
+                          </Link>
+                        </MenuItem>
+                      ))}
+                    </MenuList>
+                  </ClickAwayListener>
+                </Paper>
+              </Grow>
+            )}
+          </Popper>
+        )}
+      </div>
+    </Stack>
   );
 }
