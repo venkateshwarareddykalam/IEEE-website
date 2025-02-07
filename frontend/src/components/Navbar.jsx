@@ -41,12 +41,14 @@ const Navbar = () => {
           ))}
           {/* Submit Paper Button */}
           <motion.button
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.1 }}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500"
-          >
-            Submit Paper
-          </motion.button>
+  whileHover={{ scale: 1.1 }}
+  transition={{ duration: 0.1 }}
+  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500"
+  onClick={() => window.location.href = "/login"} // Navigate to login page
+>
+  Submit Paper
+</motion.button>
+
         </div>
       </div>
     </nav>
