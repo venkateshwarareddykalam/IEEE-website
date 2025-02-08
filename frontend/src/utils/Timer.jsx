@@ -36,15 +36,15 @@ const Timer = ({ targetDate }) => {
 
     return (
         <motion.div
-            className="flex justify-center gap-8 bg-gray-800 text-white p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto"
+            className="flex flex-wrap justify-center gap-4 sm:gap-8 bg-gray-800 text-white p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-lg mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
         >
             {Object.entries(timeLeft).map(([unit, value]) => (
                 <div key={unit} className="text-center">
-                    <div className="text-5xl font-extrabold">{value}</div>
-                    <div className="text-sm uppercase tracking-wide text-gray-400">{unit}</div>
+                    <div className="text-3xl sm:text-5xl font-extrabold">{value}</div>
+                    <div className="text-xs sm:text-sm uppercase tracking-wide text-gray-400">{unit}</div>
                 </div>
             ))}
         </motion.div>

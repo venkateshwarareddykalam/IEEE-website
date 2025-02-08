@@ -20,34 +20,46 @@
 }
 
 .sponsor-list img {
-  width: 180px; /* Default size for larger screens */
+  width: 180px; /* Keep the size consistent across all screens */
   max-width: 100%;
   height: auto;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .sponsor-list img:hover {
   opacity: 0.7;
+  transform: scale(1.1); /* Highlight effect on hover */
 }
 
-/* Responsive design for smaller screens */
+/* Adjust display width for smaller screens */
 @media (max-width: 768px) {
-  .sponsor-list img {
-      width: 140px; /* Slightly smaller but still visible on tablets */
+  .sponsor-list {
+    width: 100%;
+    animation: scrollLeftSmall 10s linear infinite;
   }
 }
 
 @media (max-width: 480px) {
-  .sponsor-list img {
-      width: 120px; /* Ensures logos are still reasonably large on small screens */
+  .sponsor-list {
+    width: 100%;
+    animation: scrollLeftSmall 10s linear infinite;
   }
 }
 
 @keyframes scrollLeft {
   from {
-      transform: translateX(0%);
+    transform: translateX(0%);
   }
   to {
-      transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollLeftSmall {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }

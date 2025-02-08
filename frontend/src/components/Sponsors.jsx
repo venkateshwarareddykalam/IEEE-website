@@ -36,7 +36,7 @@ const Sponsors = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="sponsor-list">
-          {[...sponsors, ...sponsors].map((sponsor, index) => (
+          {sponsors.map((sponsor, index) => (
             <motion.a 
               key={index} 
               href={sponsor.link} 
