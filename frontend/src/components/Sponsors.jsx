@@ -18,16 +18,13 @@ const Sponsors = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div className="sponsors">
-      <motion.h3
-        className="sponsor-heading"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        style={{ fontSize: "2.5rem" }}
-      >
-        Sponsored by
-      </motion.h3>
+    <div className="sponsors-page">
+      {/* Updated heading to match Speakers */}
+      <h1 className="heading">Sponsored By</h1>
+      <p className="description">
+        Empowering innovation with support from our incredible sponsors.
+      </p>
+      
       <motion.div 
         ref={ref}
         className="sponsor-wrapper"
