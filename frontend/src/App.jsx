@@ -1,34 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Advisory from "./components/Advisory";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./styles/Home.css";
 import ComingSoon from "./components/ComingSoon";
-import React from "react";
 import Login from "./pages/Login";
 import UnderConstruction from "./pages/UnderConstruction";
-function App() {
-  const [count, setCount] = useState(0);
+import { Routes, Route } from "react-router-dom";
 
+function App() {
   return (
     <>
-    <Navbar/>
-    <div className="main-content">
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/advisory-board" element={<Advisory />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/under-construction" element={<UnderConstruction />} />
-        <Route path="*" element={<ComingSoon/>} />
-      </Routes>
-    <Footer/>
-    </div>
-      
+      <Navbar />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/advisory-board" element={<Advisory />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/under-construction" element={<UnderConstruction />} />
+          <Route path="*" element={<ComingSoon />} />
+        </Routes>
+      </div>
+      <Footer />
     </>
   );
 }
