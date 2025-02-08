@@ -9,6 +9,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./styles/Home.css";
 import ComingSoon from "./components/ComingSoon";
+import React from "react";
+import Login from "./pages/Login";
+import UnderConstruction from "./pages/UnderConstruction";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -19,6 +22,8 @@ function App() {
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/advisory-board" element={<Advisory />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/under-construction" element={<UnderConstruction />} />
         <Route path="*" element={<ComingSoon/>} />
       </Routes>
     <Footer/>
