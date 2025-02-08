@@ -2,44 +2,59 @@ import React, { useState } from "react";
 import { navbar } from "../constants";
 import MenuButton from "./MenuButton";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Drawer, IconButton } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu
+
   const buttons = navbar.filter((item) => item.type !== "icon");
 
-  const toggleDrawer = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-    setDrawerOpen(open);
-  };
-
   return (
-    <nav className="h-16 bg-white shadow-md sticky top-0 left-0 w-full z-50">
-      <div className="flex justify-between items-center px-6 h-full">
-        {/* Left Side - Logos */}
-        <div className="flex items-center space-x-6">
+    <nav className="bg-white shadow-md sticky top-0 left-0 w-full z-50">
+      <div className="flex items-center justify-between px-4 sm:px-6 h-16">
+        {/* Centered Logos */}
+        <div className="flex justify-center items-center space-x-4">
           <motion.img
             src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
             alt="IEEE Logo"
-            className="h-12 w-auto"
+            className="h-10 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
             src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
             alt="CBIT Logo"
-            className="h-12 w-auto"
+            className="h-10 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           />
         </div>
 
-        {/* Right Side - Menu Buttons with Hover Effect */}
-        <div className="hidden md:flex space-x-6 items-center">
+        {/* Hamburger Menu for Mobile */}
+        <div className="sm:hidden">
+          <button
+            className="text-gray-700 focus:outline-none"
+            onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle menu state
+          >
+            {/* Hamburger Icon */}
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Full Menu for Larger Screens */}
+        <div className="hidden sm:flex space-x-6 items-center">
           {buttons.map((item, index) => (
             <motion.div
               key={index}
@@ -55,12 +70,30 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.1 }}
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500"
+            onClick={() => (window.location.href = "/login")} // Navigate to login page
           >
-            <Link to="/submitpaper">Submit Paper</Link>
+            Submit Paper
           </motion.button>
         </div>
       </div>
 
+      {/* Dropdown Menu for Mobile */}
+      {isMenuOpen && (
+        <div className="sm:hidden bg-white shadow-md">
+          <div className="flex flex-col items-start space-y-4 px-4 py-2">
+            {buttons.map((item, index) => (
+              <MenuButton key={index} data={item} />
+            ))}
+            {/* Submit Paper Button */}
+            <button
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 w-full text-center"
+              onClick={() => (window.location.href = "/login")}
+            >
+              Submit Paper
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
