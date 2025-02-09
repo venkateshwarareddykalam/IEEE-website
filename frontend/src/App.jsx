@@ -10,7 +10,7 @@ import ComingSoon from "./components/ComingSoon";
 import Login from "./pages/Login";
 import UnderConstruction from "./pages/UnderConstruction";
 import { Routes, Route } from "react-router-dom";
-
+import Contactus from "./components/Contactus"
 function App() {
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/under-construction" element={<UnderConstruction />} />
           <Route path="*" element={<ComingSoon />} />
+          <Route path="/contactus" element={<Contactus/>} />
         </Routes>
       </div>
       <Footer />
