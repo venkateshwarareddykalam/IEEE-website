@@ -47,14 +47,18 @@ export const navbar = [
             {
                 "label": "Technical Program Committee",
                 "url": "/technical-program"
+            },
+            {
+                "label": "Website Committee",
+                "url": "/websitecommitee"
             }
         ]
     }
     ,
     {
-        label:"Register",
-        type:"menu",
-        url:"#"
+        label:"Registration",
+        type:"link",
+        url:"/registration"
     },
     {
         label:"contactus",
