@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { navbar } from "../constants";
 import MenuButton from "./MenuButton";
 import { motion } from "framer-motion";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu
-
+  const navigate = useNavigate(); 
   const buttons = navbar.filter((item) => item.type !== "icon");
 
   return (
@@ -87,7 +87,7 @@ const Navbar = () => {
             {/* Submit Paper Button */}
             <button
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 w-full text-center"
-              onClick={() => (window.location.href = "/login")}
+              onClick={() => (navigate("/login"))} // Navigate to login page
             >
               Submit Paper
             </button>

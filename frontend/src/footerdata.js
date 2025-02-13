@@ -2,7 +2,7 @@ const footerData = [
     {
         section: "contactInfo",
         items: {
-            name: "Sasigd",
+            name: "Sasigd 2025",
             institute: "CBIT",
             location: "Hyderabad,India",
             phone: "+91",
@@ -10,7 +10,7 @@ const footerData = [
         }
     },
     {
-        section: "usefulLinks",
+        section: "UsefulLinks",
         items: [
             { label: "Home", url: "#" },
             { label: "Registration", url: "#" },
@@ -18,14 +18,14 @@ const footerData = [
         ]
     },
     {
-        section: "resources",
+        section: "Resources",
         items: [
             { label: "IEEE Paper Templates", url: "#" },
             { label: "Submit a Paper", url: "#" }
         ]
     },
     {
-        section: "socialLinks",
+        section: "SocialLinks",
         items: [
             { label: "Facebook", url: "#" },
             { label: "X", url: "#" },
@@ -33,7 +33,7 @@ const footerData = [
         ]
     },
     {
-        section: "legalLinks",
+        section: "LegalLinks",
         items: [
             { label: "Privacy Policy", url: "#" },
             { label: "Terms and Condition", url: "#" }

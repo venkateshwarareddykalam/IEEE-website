@@ -18,7 +18,7 @@ const ConferenceTimer = () => {
                 🚀 Conference Starts In:
             </div>
             <div className="bg-white/70 backdrop-blur-md rounded-xl shadow-lg p-4 sm:p-6 w-full max-w-xs sm:max-w-3xl">
-                <Timer targetDate="2025-06-15T12:00:00" />
+                <Timer targetDate="2025-10-13T12:00:00" />
             </div>
         </motion.div>
     );

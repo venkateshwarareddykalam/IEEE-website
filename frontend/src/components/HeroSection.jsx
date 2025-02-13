@@ -47,7 +47,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to SASIGD IEEE International Conference
+          Welcome to SASIGD 2025 IEEE International Conference
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl mb-12"

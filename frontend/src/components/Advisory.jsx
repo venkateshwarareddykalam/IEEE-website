@@ -75,7 +75,6 @@ const Advisory = () => {
                     </ul>
                 </section>
             </div>
-            <Footer />
         </>
     );
 };
