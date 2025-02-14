@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "/public/cbit.jpg", // Test image
-  "/public/charminar.png",
-  "/public/cybertowers.png",
-  "/public/cablebridge.png",
-  "/public/warangal fort.png",
-  "/public/hitech.png",
-  "/public/image1.png",
-  "/public/image2.png",
-  "/public/image3.png",
-  "/public/image.png",
+  "https://www.cbit.ac.in/wp-content/uploads/2019/03/Office-tab-scaled.jpeg",
+  "https://wallpaperaccess.com/full/2142411.jpg", // Test image
+  "https://live.staticflickr.com/476/19242165300_2d97f27edf_b.jpg",
+  "https://wallpaperaccess.com/full/2142432.jpg",
+  "https://i.ytimg.com/vi/UPRKkSU5_40/maxresdefault.jpg",
+  "https://thumbs.dreamstime.com/b/durgam-cheruvu-bridge-hitech-city-hyderabad-fourth-most-populous-sixth-urban-agglomeration-india-october-269614735.jpg",
+  "https://c8.alamy.com/comp/E2A25Y/india-andhra-pradesh-state-warangal-the-fort-stone-gateway-kirti-torana-E2A25Y.jpg",
+  "https://wallpaperaccess.com/full/2142631.jpg",
+  "https://wallpaperaccess.com/full/2142451.jpg",
+  "https://www.cbit.ac.in/wp-content/uploads/2019/03/Office-tab-scaled.jpeg",
 ];
 
 export default function Hero() {
@@ -46,7 +46,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to SASIGD 2025 IEEE International Conference
+         IEEE International Conference on Sustainable AI for Social Impact and Global Development, (SASIGD 2025)
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl mb-12"

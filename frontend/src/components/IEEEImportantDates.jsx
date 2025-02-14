@@ -2,7 +2,7 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 
 const dates = [
-  { label: "Early Bird Registration Deadline", date: "5th February 2025" },
+  { label: "Conference", date: "13th November 2025" },
   { label: "Abstract Submission Deadline", date: "20th February 2025" },
   { label: "Full Paper Submission Deadline", date: "28th February 2025" },
   { label: "Registration Deadline", date: "4th March 2025" }

@@ -41,6 +41,10 @@ export const navbar = [
                 "url": "/advisory-board"
             },
             {
+                "label": "Patrons",
+                "url": "/patrons"
+            },
+            {
                 "label": "Program And Organizing Committee",
                 "url": "/program-organizing"
             },
@@ -53,9 +57,69 @@ export const navbar = [
                 "url": "/technical-program"
             },
             {
+                "label": "Finance Committee",
+                "url": "/finance"
+            },
+            {
+                "label": "Publicity Committee",
+                "url": "/publicity"
+            },
+            {
+                "label": "Publications Committee",
+                "url": "/publication"
+            },
+            {
                 "label": "Website Committee",
                 "url": "/websitecommitee"
-            }
+            },
+            {
+                "label": "Partnerships Committee",
+                "url": "/partnerships"
+            },
+            {
+                "label": "Workshops & Special Sessions Committee",
+                "url": "/workshops"
+            },
+            {
+                "label": "Tutorials Committee",
+                "url": "/tutorials"
+            },
+            {
+                "label": "Student Posters Committee",
+                "url": "/StudentPosters"
+            },
+            {
+                "label": "Pre-Conference Workshops Committee",
+                "url": "/pre-conference"
+            },
+            {
+                "label": "Industry Sponsorships Committee",
+                "url": "/industry-sponsorships"
+            },
+            {
+                "label": "Content Writing and Communications Committee",
+                "url": "/content-writing"
+            },
+            {
+                "label": "Design Committee",
+                "url": "/team-design"
+            },
+            {
+                "label": "Anchoring and Cultural Committee",
+                "url": "/team-anchoring"
+            },
+            {
+                "label": "Venues and Stalls Committee",
+                "url": "/team-venues"
+            },
+            {
+                "label": "Travel and Accommodation Committee",
+                "url": "/team-travel"
+            },
+            {
+                "label": "Food Committee",
+                "url": "/team-food"
+            },
         ]
     }
     ,
