@@ -14,15 +14,15 @@ const Navbar = () => {
         {/* Centered Logos */}
         <div className="flex justify-center items-center space-x-4">
           <motion.img
-            src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
-            alt="IEEE Logo"
+            src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
+            alt="SASIGD Logo"
             className="h-10 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
-            alt="CBIT Logo"
+            src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
+            alt="IEEE Logo"
             className="h-10 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
@@ -74,6 +74,15 @@ const Navbar = () => {
           >
             Submit Paper
           </motion.button>
+        </div>
+        <div className="flex justify-center items-center space-x-4">
+          <motion.img
+            src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
+            alt="CBIT Logo"
+            className="h-10 sm:h-12 w-auto"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          />
         </div>
       </div>
 

@@ -25,6 +25,10 @@ export const navbar = [
             {
                 label: "Dept Of IT",
                 url: "/dept-it"
+            },
+            {
+                label: "About the Conference", // Added About the Conference option
+                url: "/about-conference"
             }
         ]
     },

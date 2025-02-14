@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "https://wallpapercave.com/wp/wp2809468.jpg", // Test image
-  "https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg",
-  "https://storage.googleapis.com/a1aa/image/OT2v4DYRZ-ePY6sz97srpubtlt55LtCDKPfdawr6LSQ.jpg",
-  "https://storage.googleapis.com/a1aa/image/snS2ZsyIFYzgG25tlH8vURBJHwPFiCQA1wbS_a3gSnQ.jpg",
-  "https://storage.googleapis.com/a1aa/image/bMYZeCGU7yhKHCoCgB0mWSarWmoUMp38-B5mdW3Oo_0.jpg",
-  "https://storage.googleapis.com/a1aa/image/GJecwknzbe7SjJwTGPn-ouk5xp2yNIuGMmcOu701laQ.jpg",
-  "https://storage.googleapis.com/a1aa/image/n78fd4l_SValusNChC7cWWkRQjivZxQy_Awnyf6dwuU.jpg",
-  "https://storage.googleapis.com/a1aa/image/hgY8CVZNCfpcrAJ5MrawJeNZoUv_12MM8VrqdzUPXGs.jpg",
-  "https://storage.googleapis.com/a1aa/image/NT_OCDqNLOmGpBh6gIMV4WMZGEi8Cw4Ac0wcXojXu8I.jpg",
-  "https://storage.googleapis.com/a1aa/image/YIEFip1xQikvEooWhwuOv2F9DD08mUOksufHNStgIXw.jpg",
-  "https://storage.googleapis.com/a1aa/image/ihQnEdiu3mJ3uns_tejmZVQSJXHoy4lLmUtNXZpx8NY.jpg",
+  "src/assets/cbit.jpg", // Test image
+  "src/assets/charminar.png",
+  "src/assets/cybertowers.png",
+  "src/assets/cablebridge.png",
+  "src/assets/warangal fort.png",
+  "src/assets/hitech.png",
+  "src/assets/image1.png",
+  "src/assets/image2.png",
+  "src/assets/image3.png",
+  "src/assets/image.png",
 ];
 
 export default function Hero() {

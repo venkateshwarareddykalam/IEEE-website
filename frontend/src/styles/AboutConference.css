@@ -1,0 +1,107 @@
+/* General Styles */
+.conference-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f8f9fa;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .conference-header {
+    text-align: center;
+    background-color: #32275b;
+    color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+  }
+  
+  .conference-header h1 {
+    font-size: 2.5em;
+  }
+  
+  .conference-header h2 {
+    font-size: 1.8em;
+  }
+  
+  .conference-header p {
+    font-size: 1.2em;
+    margin: 20px auto;
+    max-width: 800px;
+  }
+  
+  .explore-tracks {
+    background-color: white;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .explore-tracks:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  
+  /* Tracks Layout */
+  .tracks-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  
+  
+  .track-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, .1) .3rem .3rem .6rem -.2rem; 
+   padding:20 px;
+}
+/* Tracks Layout */
+.tracks-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two tracks per row */
+    gap: 20px; /* Spacing between cards */
+    margin-top: 20px;
+  }
+  
+  .track-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .track-card h3 {
+    font-size: 1.5em;
+    color: #007bff;
+  }
+  
+  .track-card ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Align text with the title */
+  }
+  
+  .track-card li {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  /* Hover Effect for Cards */
+  .track-card:hover {
+    transform: translateY(-15px); /* Slight lift on hover */
+    box-shadow: rgba(0, 0, 0, .15) .3rem .3rem .6rem -.2rem; /* Stronger shadow on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .tracks-container {
+      grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+      gap: 15px;
+      margin-top: 15px;
+    }
+  }
+  
+  
