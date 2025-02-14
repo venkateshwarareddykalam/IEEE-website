@@ -7,7 +7,7 @@ const AboutCBIT = () => {
       {/* Top Image Section */}
       <div className="top-image">
         <img
-          src="/src/assets/cbit1.png" // Replace with your CBIT banner image path
+          src="/public/cbit1.png" // Replace with your CBIT banner image path
           alt="CBIT Banner"
           className="banner-image"
         />

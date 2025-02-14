@@ -7,7 +7,7 @@ const AboutITDepartment = () => {
       {/* Top Image Section */}
       <div className="top-image">
         <img
-          src="/src/assets/cbit1.png" // Replace with your IT department banner image path
+          src="/public/cbit1.png" // Replace with your IT department banner image path
           alt="IT Department Banner"
           className="banner-image"
         />

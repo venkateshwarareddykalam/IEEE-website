@@ -2,16 +2,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "src/assets/cbit.jpg", // Test image
-  "src/assets/charminar.png",
-  "src/assets/cybertowers.png",
-  "src/assets/cablebridge.png",
-  "src/assets/warangal fort.png",
-  "src/assets/hitech.png",
-  "src/assets/image1.png",
-  "src/assets/image2.png",
-  "src/assets/image3.png",
-  "src/assets/image.png",
+  "/public/cbit.jpg", // Test image
+  "/public/charminar.png",
+  "/public/cybertowers.png",
+  "/public/cablebridge.png",
+  "/public/warangal fort.png",
+  "/public/hitech.png",
+  "/public/image1.png",
+  "/public/image2.png",
+  "/public/image3.png",
+  "/public/image.png",
 ];
 
 export default function Hero() {
