@@ -12,6 +12,8 @@ import UnderConstruction from "./pages/UnderConstruction";
 import { Routes, Route } from "react-router-dom";
 import Contactus from "./components/Contactus";
 import AboutConference from "./components/AboutConference";
+import AboutCBIT from "./components/AboutCBIT";
+import AboutITDepartment from "./components/AboutITDepartment";
 function App() {
   return (
     <>
@@ -25,6 +27,8 @@ function App() {
           <Route path="*" element={<ComingSoon />} />
           <Route path="/contactus" element={<Contactus/>} />
           <Route path="/about-conference" element={<AboutConference/>} />
+          <Route path="/about-cbit" element={<AboutCBIT/>} />
+          <Route path="/dept-it" element={<AboutITDepartment/>} />
         </Routes>
       </div>
       <Footer />

@@ -20,7 +20,7 @@ export const navbar = [
         submenu: [
             {
                 label: "CBIT",
-                url: "/cbit"
+                url: "/about-cbit"
             },
             {
                 label: "Dept Of IT",
