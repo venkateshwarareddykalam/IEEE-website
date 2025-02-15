@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const images = [
-  "https://wallpapercave.com/wp/wp2809468.jpg", // Test image
-  "https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg",
-  "https://storage.googleapis.com/a1aa/image/OT2v4DYRZ-ePY6sz97srpubtlt55LtCDKPfdawr6LSQ.jpg",
-  "https://storage.googleapis.com/a1aa/image/snS2ZsyIFYzgG25tlH8vURBJHwPFiCQA1wbS_a3gSnQ.jpg",
-  "https://storage.googleapis.com/a1aa/image/bMYZeCGU7yhKHCoCgB0mWSarWmoUMp38-B5mdW3Oo_0.jpg",
-  "https://storage.googleapis.com/a1aa/image/GJecwknzbe7SjJwTGPn-ouk5xp2yNIuGMmcOu701laQ.jpg",
-  "https://storage.googleapis.com/a1aa/image/n78fd4l_SValusNChC7cWWkRQjivZxQy_Awnyf6dwuU.jpg",
-  "https://storage.googleapis.com/a1aa/image/hgY8CVZNCfpcrAJ5MrawJeNZoUv_12MM8VrqdzUPXGs.jpg",
-  "https://storage.googleapis.com/a1aa/image/NT_OCDqNLOmGpBh6gIMV4WMZGEi8Cw4Ac0wcXojXu8I.jpg",
-  "https://storage.googleapis.com/a1aa/image/YIEFip1xQikvEooWhwuOv2F9DD08mUOksufHNStgIXw.jpg",
-  "https://storage.googleapis.com/a1aa/image/ihQnEdiu3mJ3uns_tejmZVQSJXHoy4lLmUtNXZpx8NY.jpg",
+  "https://www.cbit.ac.in/wp-content/uploads/2019/03/Office-tab-scaled.jpeg",
+  "https://wallpaperaccess.com/full/2142411.jpg", // Test image
+  "https://live.staticflickr.com/476/19242165300_2d97f27edf_b.jpg",
+  "https://wallpaperaccess.com/full/2142432.jpg",
+  "https://i.ytimg.com/vi/UPRKkSU5_40/maxresdefault.jpg",
+  "https://thumbs.dreamstime.com/b/durgam-cheruvu-bridge-hitech-city-hyderabad-fourth-most-populous-sixth-urban-agglomeration-india-october-269614735.jpg",
+  "https://c8.alamy.com/comp/E2A25Y/india-andhra-pradesh-state-warangal-the-fort-stone-gateway-kirti-torana-E2A25Y.jpg",
+  "https://wallpaperaccess.com/full/2142631.jpg",
+  "https://wallpaperaccess.com/full/2142451.jpg",
+  "https://www.cbit.ac.in/wp-content/uploads/2019/03/Office-tab-scaled.jpeg",
 ];
 
 export default function Hero() {
@@ -47,7 +46,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          Welcome to SASIGD 2025 IEEE International Conference
+         IEEE International Conference on Sustainable AI for Social Impact and Global Development, (SASIGD 2025)
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl mb-12"
