@@ -46,16 +46,17 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-         IEEE International Conference on Sustainable AI for Social Impact and Global Development, (SASIGD 2025)
+         IEEE International Conference on (SASIGD 2025)
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl mb-12"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.5, type: "spring", stiffness: 100 }}
         >
           Discover the best content and connect with amazing people.
         </motion.p>
+
       </div>
 
       {/* Dots Navigation */}

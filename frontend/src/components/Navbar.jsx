@@ -21,8 +21,15 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           />
-          <motion.img
+          {/* <motion.img
             src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
+            alt="IEEE Logo"
+            className="h-8 sm:h-12 w-auto"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          /> */}
+          <motion.img
+            src="/ieee1.png"
             alt="IEEE Logo"
             className="h-8 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
@@ -47,7 +54,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.1 }}
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transform transition-transform duration-300 ease-in-out hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500"
-            onClick={() => (window.location.href = "/login")} // Navigate to login page
+            onClick={() => navigate("/login")} // Navigate to login page
           >
             Submit Paper
           </motion.button>
