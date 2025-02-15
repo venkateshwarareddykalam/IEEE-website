@@ -17,13 +17,22 @@ const ImportantDates = () => {
       <motion.div 
         ref={ref}
         className="text-center max-w-4xl w-full"
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: -50 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.5 }}
       >
-        <h2 className="text-2xl font-bold text-[#0C0636] mb-16">
+        <motion.p
+        ref={ref}
+        initial={{opacity:0,x:-100}}
+        animate={isInView ? { opacity: 1, x:0 } : {}}
+        transition={{ duration: 1.5 }}
+
+        >
+        <h2 className="text-3xl font-bold text-[#0C0636] mb-16">
           Important <span className="text-[#3A4D8F]">Dates</span>
         </h2>
+        </motion.p>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
           {dates.map((item, index) => (
             <motion.div 
