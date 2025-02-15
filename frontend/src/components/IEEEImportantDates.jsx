@@ -32,8 +32,8 @@ const ImportantDates = () => {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <div className="w-full h-2 bg-[#3A4D8F] absolute top-0 left-0 rounded-t-lg"></div>
-              <div className="w-12 h-12 bg-white border-4 border-[#3A4D8F] rounded-full flex justify-center items-center absolute -top-6 left-1/2 transform -translate-x-1/2 shadow-md">
+              <div className="w-full h-2 bg-[#3A4D8F] absolute top-5 left-0 rounded-t-lg"></div>
+              <div className="w-12 h-12 bg-white border-4 border-[#3A4D8F] rounded-full flex justify-center items-center absolute -top-0 left-1/2 transform -translate-x-1/2 shadow-md">
                 <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Calendar" className="w-6" />
               </div>
               <div className="mt-8 font-bold text-lg text-gray-800">{item.label}</div>
