@@ -32,7 +32,7 @@ const Registration = () => {
           <li><strong>MICR Code of Bank:</strong> </li>
           <li><strong>IFSC Code:</strong> </li>
         </ul>
-        <h2>Registration for Virtual Mode</h2>
+        {/* <h2>Registration for Virtual Mode</h2>
         <table>
           <thead>
             <tr>
@@ -126,7 +126,7 @@ const Registration = () => {
               <td>$ 50</td>
             </tr>
           </tbody>
-        </table>
+        </table> */}
 
         <h2>Regitration for Physical mode</h2>
         <table>
