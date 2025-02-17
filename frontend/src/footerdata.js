@@ -2,10 +2,10 @@ const footerData = [
     {
         section: "contactInfo",
         items: {
-            name: "Sasigd 2025",
+            name: "SASIGD 2025",
             institute: "CBIT",
             location: "Hyderabad,India",
-            phone: "+91",
+            phone: "+91 8466997201",
             email: "cbit.ac.in"
         }
     },

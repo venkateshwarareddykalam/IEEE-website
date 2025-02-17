@@ -1,0 +1,121 @@
+.registration-container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.committee-header {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #2d4059;
+    padding: 20px 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.registration-content {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+
+.registration-content ol {
+    margin-top: 20px;
+    padding-left: 20px;
+    list-style-type: decimal;
+}
+
+.registration-content ul li {
+    margin-bottom: 8px;
+    list-style-type: disc;
+}
+
+h2 {
+    color: #2d4059;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #090101;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #bbdefb;
+    color: #2d4059;
+}
+
+/* Make the layout responsive */
+@media screen and (max-width: 768px) {
+    .registration-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .committee-header {
+        font-size: 2rem;
+        padding: 15px 20px;
+    }
+
+    .registration-content {
+        font-size: 1rem;
+    }
+
+    table, th, td {
+        font-size: 0.9rem;
+    }
+
+    table, th, td {
+        padding: 8px;
+    }
+}
+.sponsor-container {
+    display: flex;               /* Uses Flexbox to align items in a row */
+    justify-content: center;     /* Centers the logos horizontally */
+    gap: 20px;                   /* Adds spacing between the logos */
+    flex-wrap: wrap;             /* Allows logos to wrap on smaller screens */
+  }
+  
+  .sponsor-logo {
+    max-width: 100%;             /* Ensures the logo doesn't exceed the width of its container */
+    height: auto;                /* Maintains the aspect ratio of the logos */
+    width: 150px;                /* Sets a default width */
+  }
+  
+  /* Responsive styling for smaller screen sizes */
+  @media (max-width: 768px) {
+    .sponsor-logo {
+      width: 100px;              /* Reduces the width for tablets and smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sponsor-logo {
+      width: 80px;               /* Further reduces the width for mobile devices */
+    }
+  }
+  
+  
