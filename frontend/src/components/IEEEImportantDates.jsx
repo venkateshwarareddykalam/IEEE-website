@@ -2,11 +2,28 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 
 const dates = [
-  { label: "Early Bird Registration Deadline", date: "5th February 2025" },
-  { label: "Abstract Submission Deadline", date: "20th February 2025" },
-  { label: "Full Paper Submission Deadline", date: "28th February 2025" },
-  { label: "Registration Deadline", date: "4th March 2025" }
+  { label: "Deadline for Full Paper Submission", date: "30th April 2025" },
+  { label: "Notification of Acceptance", date: "1st July 2025" },
+  { label: "Camera Ready Paper Submission", date: "15th July 2025" },
+  { label: "Early Bird Registration Deadline", date: "21st July 2025" },
+  { label: "Last Date of Registration", date: "1st August 2025" },
+  { label: "Conference Date", date: "13th - 14th October 2025" },
+
+  // Call for Special Sessions
+  { label: "Deadline for Special Session Proposals", date: "20th March 2025" },
+  { label: "Notification of Acceptance for Special Sessions", date: "31st March 2025" },
+  { label: "Deadline for Paper Submission (Special Sessions)", date: "30th April 2025" },
+  { label: "Early Bird Registration Deadline (Special Sessions)", date: "21st July 2025" },
+  { label: "Last Date of Registration (Special Sessions)", date: "1st August 2025" },
+
+  // Call for Student Posters
+  { label: "Deadline for Poster Submission", date: "16th June 2025" },
+  { label: "Notification of Acceptance for Posters", date: "1st July 2025" },
+  { label: "Final Poster Submission", date: "15th July 2025" },
+  { label: "Early Bird Registration Deadline (Student Posters)", date: "21st July 2025" },
+  { label: "Last Date of Registration (Student Posters)", date: "1st August 2025" }
 ];
+
 
 const ImportantDates = () => {
   const ref = React.useRef(null);
