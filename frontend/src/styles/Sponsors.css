@@ -63,3 +63,35 @@
     transform: translateX(-100%);
   }
 }
+.sponsors-page {
+  background-color: white;
+  padding: 2rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.sponsor-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.sponsor-logo {
+  transition: transform 0.3s ease-in-out;
+}
