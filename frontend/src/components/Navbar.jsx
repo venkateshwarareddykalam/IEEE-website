@@ -22,8 +22,8 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           />
           <motion.img
-            src="https://s3-us-west-1.amazonaws.com/foscoshopify/graphics/uploads/2010/12/IEEE-logo.gif"
-            alt="IEEE Logo"
+            src="https://technologyandsociety.org/wp-content/uploads/ieee-ssit-logo.png"
+            alt="IEEE SSIT Logo"
             className="h-8 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
@@ -54,8 +54,15 @@ const Navbar = () => {
         </div>
         <div className="flex justify-center items-center space-x-4">
           <motion.img
+            src="https://ieeemadras.org/wp-content/uploads/2022/11/cropped-cropped-ieeemas-2-1.png"
+            alt="IEEE Madras Section Logo"
+            className="h-8 sm:h-12 w-30"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
+          />
+          <motion.img
             src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
-            alt="SASIGD Logo"
+            alt="CBIT Logo"
             className="h-8 sm:h-12 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}

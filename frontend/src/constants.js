@@ -10,6 +10,16 @@ export const navbar = [
         type:"icon"
     },
     {
+        label:"ieee ssit logo",
+        url:"https://technologyandsociety.org/wp-content/uploads/ieee-ssit-logo.png",
+        type:"icon"
+    },
+    {
+        label:"ieee madras section logo",
+        url:"https://ieeemadras.org/wp-content/uploads/2022/11/cropped-cropped-ieeemas-2-1.png",
+        type:"icon"
+    },
+    {
         label: "Home",
         type: "link",
         url: "/"
