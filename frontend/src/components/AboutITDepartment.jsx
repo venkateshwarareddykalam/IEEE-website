@@ -7,7 +7,7 @@ const AboutITDepartment = () => {
       {/* Top Image Section */}
       <div className="top-image">
         <img
-          src="/public/cbit1.png" // Replace with your IT department banner image path
+          src="https://www.cbit.ac.in/wp-content/uploads/2019/01/gal-image-1-1024x683.jpg" // Replace with your IT department banner image path
           alt="IT Department Banner"
           className="banner-image"
         />
@@ -30,7 +30,7 @@ const AboutITDepartment = () => {
         </section>
 
         {/* Vision and Mission Section */}
-        <section className="vision-mission">
+        {/* <section className="vision-mission">
           <h2>Department Vision</h2>
           <p>
             To be a center of excellence in the field of information technology that yields pioneers and research experts who can contribute for the socio-economic development of the nation.
@@ -43,16 +43,16 @@ const AboutITDepartment = () => {
             <li>To imbibe social responsibility in students.</li>
             <li>To motivate students to be trend setters and technopreneurs.</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Programs Offered Section */}
-        <section className="programs-offered">
+        {/* <section className="programs-offered">
           <h2>Programs Offered</h2>
           <p>The Department offers Under Graduate program in B.E. (Information Technology) with an intake of 180 students.</p>
           <ul>
             <li>B.E (IT)</li>
           </ul>
-        </section>
+        </section> */}
 
         {/* Program Outcomes Section */}
         <section className="program-outcomes">

@@ -7,7 +7,7 @@ const AboutCBIT = () => {
       {/* Top Image Section */}
       <div className="top-image">
         <img
-          src="/public/cbit1.png" // Replace with your CBIT banner image path
+          src="https://www.cbit.ac.in/wp-content/uploads/2019/01/gal-image-1-1024x683.jpg" // Replace with your CBIT banner image path
           alt="CBIT Banner"
           className="banner-image"
         />
@@ -21,7 +21,7 @@ const AboutCBIT = () => {
       {/* Content Section */}
       <div className="content">
         {/* Institute Vision & Mission */}
-        <section className="vision-mission">
+        {/* <section className="vision-mission">
           <h2>Institute Vision & Mission</h2>
           <p>
             <strong>Vision:</strong> “To be the center of excellence in technical education and research”.
@@ -29,14 +29,14 @@ const AboutCBIT = () => {
           <p>
             <strong>Mission:</strong> “To address the emerging needs through quality technical education and advanced research”.
           </p>
-        </section>
+        </section> */}
 
         {/* Institute Recognitions */}
         <section className="recognitions">
           <h2>Institute Recognitions</h2>
           {/* Space for scrollable component */}
           <img
-          src="/src/assets/image5.png" // Replace with your CBIT banner image path
+          src="/public/image5.png" // Replace with your CBIT banner image path
           alt="CBIT Banner"
         />
           <div className="recognition-images">
@@ -51,7 +51,7 @@ const AboutCBIT = () => {
             CHAITANYA BHARATHI INSTITUTE OF TECHNOLOGY, established in the Year 1979, esteemed as the Premier Engineering Institute in the States of Telangana and Andhra Pradesh, was promoted by a Group of Visionaries from varied Professions of Engineering, Medical, Legal and Management, with an Objective to facilitate the Best Engineering and Management Education to the Students and contribute towards meeting the need of Skilled and Technically conversant Engineers and Management Professionals, for the Country that embarked on an Economic Growth Plan.
           </p>
           <p>
-            The Institute, committed to Education and Innovation, started with three-Degree Courses in Engineering for 200 Students and over the 45 Years, has emerged as a Dream Destination for; Students seeking to excel in Engineering and Management Education, Teaching Community to progress with a rewarding Career and Corporates to source well-rounded Engineers.
+            The Institute, committed to Education and Innovation, started with three-Degree Courses in Engineering for 200 Students and over the 46 Years, has emerged as a Dream Destination for; Students seeking to excel in Engineering and Management Education, Teaching Community to progress with a rewarding Career and Corporates to source well-rounded Engineers.
           </p>
           <p>
             Stringent Academic Standards, Industry compliant Teaching Methodology, Research Projects from Private and Public Sector Industries in Engineering and Management and Consultancy Practice, enabled the Institute to establish its Identity in the Technical Education and is Ranked No. 1 amongst the Private Engineering Colleges in both the Telugu Speaking States.

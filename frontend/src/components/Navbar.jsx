@@ -15,9 +15,9 @@ const Navbar = () => {
         {/* Centered Logos */}
         <div className="flex justify-center items-center space-x-4">
           <motion.img
-            src="https://www.cbit.ac.in/wp-content/uploads/2023/04/CBIT-LOGO-2023.png"
+            src="IEEE(1).png"
             alt="SASIGD Logo"
-            className="h-8 sm:h-12 w-auto"
+            className="h-8 sm:h-14 w-auto"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
           />
