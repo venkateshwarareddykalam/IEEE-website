@@ -16,6 +16,7 @@ import AboutCBIT from "./components/AboutCBIT";
 import AboutITDepartment from "./components/AboutITDepartment";
 import Registration from "./components/Registration";
 import Patrons from "./components/Patrons";
+import GeneralChairs from "./components/GeneralChairs";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
           <Route path="/dept-it" element={<AboutITDepartment/>} />
           <Route path="/registration" element={<Registration/>} />
           <Route path="/patrons" element={<Patrons />} />
+          <Route path="/general-chairs" element={<GeneralChairs />} />
         </Routes>
       </div>
       <Footer />

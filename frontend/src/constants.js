@@ -55,6 +55,10 @@ export const navbar = [
                 "url": "/patrons"
             },
             {
+                "label": "General Chairs",
+                "url": "/general-chairs"
+            },
+            {
                 "label": "Program And Organizing Committee",
                 "url": "/program-organizing"
             },

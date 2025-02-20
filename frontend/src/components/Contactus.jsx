@@ -18,14 +18,14 @@ const Contactus = () => {
           <p>Chaitanya Bharathi Institute of Technology</p>
           <p className="address">Gandipet, Hyderabad, Telangana - 500075</p>
 
-          <h4>Phone:</h4>
+          {/* <h4>Phone:</h4>
           <p className="phone-number">040-24193276</p>
 
           <h4>Mobile:</h4>
-          <p className="mobile-number">8466997201</p>
+          <p className="mobile-number">8466997201</p> */}
 
           <h4>Email:</h4>
-          <p className="email">principal@cbit.ac.in</p>
+          <p className="email">ieee_sasigd2025@cbit.ac.in</p>
         </div>
 
         {/* Right - Contact Form */}

@@ -13,7 +13,7 @@ const Registration = () => {
         </p>
         <ul>
           <li>For early bird registration, at least one author of the accepted paper must register on or before 23rd December, 2025.</li>
-          <li>For regular registration after the early bird registration, i.e., .12.2024, at least one author of the accepted paper must register with higher fees.</li>
+          <li>For regular registration after the early bird registration,  at least one author of the accepted paper must register with higher fees.</li>
           <li>Unregistered papers will not be included in the final program for presentation and submission to IEEE Xplore.</li>
           <li>Each full registration is valid for one paper.</li>
           <li>The length of each submitted final paper is presumably six (6) to eight (8) pages, with a maximum of 10 pages.</li>
@@ -25,7 +25,7 @@ const Registration = () => {
         <p>If UPI payment is not available, you can avail the following bank payment details:</p>
         <ul>
           <li><strong>Name of the Account Holder:</strong> </li>
-          <li><strong>Bank Name:</strong>K</li>
+          <li><strong>Bank Name:</strong></li>
           <li><strong>Bank Address:</strong></li>
           <li><strong>Type of Savings Account:</strong> </li>
           <li><strong>Bank Account Number:</strong></li>
@@ -128,7 +128,7 @@ const Registration = () => {
           </tbody>
         </table> */}
 
-        <h2>Regitration for Physical mode</h2>
+        <h2>Registration Details</h2>
         <table>
           <thead>
           <tr>
@@ -187,6 +187,13 @@ const Registration = () => {
               <td>₹ 3,000</td>
             </tr>
             <tr>
+              <td>Student Poster (Indian Student)</td>
+              <td>₹ 2000</td>
+              <td>₹ 2100</td>
+              <td>₹ 2200</td>
+              <td>₹ 2300</td>
+            </tr>
+            <tr>
               <td>Foreign Author*(Academia/Industry)</td>
               <td>$ 125</td>
               <td>$ 150</td>
@@ -221,11 +228,18 @@ const Registration = () => {
               <td>$ 60</td>
               <td>$ 100</td>
             </tr>
+            <tr>
+              <td>Student Poster (Foreign Student)</td>
+              <td>$ 50</td>
+              <td>$ 60</td>
+              <td>$ 60</td>
+              <td>$ 100</td>
+            </tr>
           </tbody>
         </table>
         <ol>
             <li>All papers must be registered. One FULL AUTHOR REGISTRATION will allow the author to present only one paper on which he/she is an author or co-author. To present more than one paper registration must be done accordingly.</li>
-            <li>The paper authors must register by the respective camera ready deadline, i.e., January 15, 2025.</li>
+            <li>The paper authors must register by the respective camera ready deadline.</li>
             <li>Accomodation may be provided as per availability in EDC(Executive Development Center) and Student Hostels on payment basis in First Come First Serve basis.</li>
         </ol>
         
